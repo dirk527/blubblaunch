@@ -28,7 +28,7 @@ runtime/adoptopenjdk.jre/Contents/Home
 * Notarize (out of scope for this document)
 
 # Example
-Feel free to download a Mac app from https://blubbsoft.info/klausladen and look at its internals. The applications are German-language only, but for understanding the startup process you'll be fine.
+Feel free to download the Mac app from https://datendestille.de and look at its internals. The applications are German-language only, but for understanding the startup process you'll be fine.
 
 # Limitations
 * VM options, e.g. -Xmx for memory allocation, are hard-coded into the launcher.
