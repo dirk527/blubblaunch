@@ -5,11 +5,7 @@ This is a macOS native launcher for universal Java Applications, i.e. those that
 This project exists because under Sequoia, an app not only needs to be signed and notarized, but a shell script no longer works as a launcher. Tested: blubblaunch compiled with JDK 21 results in a binary and applications that work with JRE 11 (Adoptium), JRE 17 (Adoptium), JRE 21 (Adoptium).
 
 # How to use
-* Download a JDK that matches your CPU architecture
-* Install XCode including command line tools
-* Check out this repo (or really, just copy the code)
-* Compile the launcher:
-`clang -arch x86_64 -arch arm64 -I$JDKPATH/include -I$JDKPATH/include/darwin -framework Cocoa -o blubblaunch blubblaunch.c`
+* Obtain a blubblaunch binary, either download the release or compile
 * Build the directory structure of your mac app
 * Place the blubblaunch binary in Contents/MacOS
 * Edit Info.plist so that CFBundleExecutable is set to blubblaunch
@@ -26,6 +22,13 @@ runtime/adoptopenjdk.jre/Contents/Home
 * At this point, you can call blubblaunch from the command line - it should start the application, or at least print some helpful messages
 * Sign (out of scope for this document. Note: for Sequoia, you need to have entitlements)
 * Notarize (out of scope for this document)
+
+# Compiling
+* Download a JDK that matches your CPU architecture
+* Install XCode including command line tools
+* Check out this repo (or really, just copy the code)
+* Compile the launcher:
+`clang -arch x86_64 -arch arm64 -I$JDKPATH/include -I$JDKPATH/include/darwin -framework Cocoa -o blubblaunch blubblaunch.c`
 
 # Example
 Feel free to download the Mac app from https://datendestille.de and look at its internals. The applications are German-language only, but for understanding the startup process you'll be fine.
