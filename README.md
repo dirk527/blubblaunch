@@ -34,7 +34,6 @@ Feel free to download the Mac app from https://datendestille.de and look at its 
 * VM options, e.g. -Xmx for memory allocation, are hard-coded into the launcher.
 * The configuration file format is rudimentary and inflexible.
 * JRE 7 (from Oracle) kind of works - however, there is no ARM version for that ancient software. So I compiled blubblaunch as Intel-only, that triggers Rosetta emulation and the software starts in principle. However, it is not possible to notarize the resulting software, because JRE 7 links to a version of the standard lib that is too old for Apple's current policies. So users have to open Systems Settings and allow starting the software.
-* The tool `jpackage`, included in every JDK, is an attractive alternative if you do not need a universal application. It also includes a launcher, but I did not manage to isolate it enough to use in my own applications.
 
-# Acknowledgements
+# Acknowledgement
 The launcher is based on the code by Damien Goutte-Gattat (who has allowed me to share it under BSD-2 license) found on https://incenp.org/notes/2023/universal-java-app-on-macos.html
