@@ -1,5 +1,5 @@
 # blubblaunch
-This is a macOS native launcher for universal Java Applications, i.e. those that run natively with both ARM (Apple Silicon, M-series CPUs) and Intel (x86_64 CPUs). It is a replacement for the JavaApplicationStub of old. It is not a packager, but rather intended for those who create Mac applications in their own buld pipelines.
+This is a macOS native launcher for universal Java Applications, i.e. those that run natively with both ARM (Apple Silicon, M-series CPUs) and Intel (x86_64 CPUs). It is a replacement for the JavaApplicationStub of yore. It is not a packager, but rather intended for those who create Mac applications in their own build pipelines.
 
 # Necessary for Sequoia
 This project exists because under Sequoia, an app not only needs to be signed and notarized, but a shell script no longer works as a launcher. Tested: blubblaunch compiled with JDK 21 results in a binary and applications that work with JRE 11 (Adoptium), JRE 17 (Adoptium), JRE 21 (Adoptium).
