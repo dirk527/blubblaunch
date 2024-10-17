@@ -14,7 +14,7 @@ This project exists because under Sequoia, an app not only needs to be signed an
 * Place the blubblaunch binary in Contents/MacOS
 * Edit Info.plist so that CFBundleExecutable is set to blubblaunch
 * Put your main jar into Contents/Java
-* If you have supplemental libraries, you need to put them into the app bundle as well and your main jar must have a MANIFEST.MF that lists them as relative paths from the main jar.
+* If you have supplemental libraries, you need to put them into the app bundle as well and your main jar must have a MANIFEST.MF that lists them as relative paths from the main jar. If you can start your application using `java -jar mainjar.jar`, the manifest is correct.
 * I recommend you use the script from https://incenp.org/notes/2023/universal-java-app-on-macos.html to create a universal JRE
 * Put your JRE somewhere into Contents/
 * Create the text file Contents/blubblaunch.config with exactly three lines: your main class, the path to your main jar and the path to the JRE Home. For example:
