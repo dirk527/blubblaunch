@@ -1,5 +1,5 @@
 # blubblaunch
-This is a macOS native launcher for universal Java Applications, i.e. those that run natively with both ARM (Apple Silicon, M-series CPUs) and Intel (x86_64 CPUs). It is a replacement for the JavaApplicationStub of yore. It is not a packager, but rather intended for those who create Mac applications in their own build pipelines.
+This is a macOS native launcher for universal Java Applications, i.e. those that run natively with both ARM (Apple Silicon, M-series) and Intel (x86_64) CPUs. It is a replacement for the JavaApplicationStub of yore. It is not a packager, but rather intended for those who create Mac applications in their own build pipelines.
 
 # Necessary for Sequoia
 This project exists because under Sequoia, an app not only needs to be signed and notarized, but a shell script no longer works as a launcher. Tested: blubblaunch compiled with JDK 21 results in a binary and applications that work with JRE 11 (Adoptium), JRE 17 (Adoptium), JRE 21 (Adoptium).
@@ -13,7 +13,7 @@ This project exists because under Sequoia, an app not only needs to be signed an
 * If you have supplemental libraries, you need to put them into the app bundle as well and your main jar must have a MANIFEST.MF that lists them as relative paths from the main jar. If you can start your application using `java -jar mainjar.jar`, the manifest is correct.
 * I recommend you use the script from https://incenp.org/notes/2023/universal-java-app-on-macos.html to create a universal JRE
 * Put your JRE somewhere into Contents/
-* Create the text file Contents/blubblaunch.config with exactly three lines: your main class, the path to your main jar and the path to the JRE Home. For example:
+* Create the text file Contents/Java/blubblaunch.config with exactly three lines: your main class, the path to your main jar and the path to the JRE Home. For example:
 ```
 org.myproject.ApplicationMain
 Java/myproject.jar
